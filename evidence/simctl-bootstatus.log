@@ -1,3 +1,20 @@
 Monitoring boot status for iPhone 17 (BBB7317F-76C6-4BD5-BF4B-EF6ABAEBA1F8).
-Device already booted, nothing to do.
+Booting device...
+[2026-07-08 15:05:50 +0000] Status=0, isTerminal=NO, Elapsed=00:00.
+	Booting
+
+[2026-07-08 15:05:51 +0000] Status=1, isTerminal=NO, Elapsed=00:01.
+	Waiting on BackBoard
+
+[2026-07-08 15:05:57 +0000] Status=4, isTerminal=NO, Elapsed=00:07.
+	Waiting on System App
+
+[2026-07-08 15:05:58 +0000] Status=4, isTerminal=NO, Elapsed=00:07.
+	Waiting on System App
+
+[2026-07-08 15:05:58 +0000] Status=4, isTerminal=NO, Elapsed=00:08.
+	Waiting on System App
+
+[2026-07-08 15:06:00 +0000] Status=4294967295, isTerminal=YES, Elapsed=00:09.
+	Finished
 

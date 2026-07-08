@@ -146,6 +146,17 @@ final class BiomeAppModel {
         persist()
     }
 
+    func purchasePremiumPack(_ pack: PremiumPackState) async {
+        let updatedPack = await premiumStore.purchase(productId: pack.productId)
+        upsertPremiumPack(updatedPack)
+        persist()
+    }
+
+    func restorePremiumPacks() async {
+        premiumPacks = await premiumStore.restorePurchases(currentPacks: premiumPacks)
+        persist()
+    }
+
     @discardableResult
     private func persist() -> Bool {
         do {
@@ -155,6 +166,14 @@ final class BiomeAppModel {
         } catch {
             inlineError = "Couldn’t save this postcard. Your draft is still here."
             return false
+        }
+    }
+
+    private func upsertPremiumPack(_ pack: PremiumPackState) {
+        if let index = premiumPacks.firstIndex(where: { $0.productId == pack.productId }) {
+            premiumPacks[index] = pack
+        } else {
+            premiumPacks.append(pack)
         }
     }
 }

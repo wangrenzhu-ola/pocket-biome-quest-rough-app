@@ -12,6 +12,9 @@ struct PremiumPacksView: View {
                 Button("Refresh StoreKit products") {
                     Task { await model.refreshPremiumPacks() }
                 }
+                Button("Restore purchase") {
+                    Task { await model.restorePremiumPacks() }
+                }
             } header: {
                 Text("Premium Quest Packs")
             }
@@ -33,10 +36,13 @@ struct PremiumPacksView: View {
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                         HStack {
-                            Button("Purchase") { }
+                            Button("Purchase") {
+                                Task { await model.purchasePremiumPack(pack) }
+                            }
                                 .disabled(pack.entitlementState == .unavailable)
-                            Button("Restore purchase") { }
-                                .disabled(pack.entitlementState == .unavailable)
+                            Button("Restore purchase") {
+                                Task { await model.restorePremiumPacks() }
+                            }
                         }
                         Text(pack.entitlementState == .unavailable ? "StoreKit unavailable. Free quests still work." : pack.restoreState)
                             .font(.caption)

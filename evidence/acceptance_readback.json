@@ -2,21 +2,21 @@
   "schema_version": "appfactory.acceptance_readback.v1",
   "product_name": "Pocket Biome Quest",
   "source_refs": [
-    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PrivacyOnboardingView.swift",
-    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PocketBiomeQuestApp.swift",
-    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/FieldPostcardReviewView.swift",
-    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PostcardDetailView.swift",
-    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/RootView.swift",
-    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/BiomeStore.swift",
     "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/BiomeAppModel.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/BiomeStore.swift",
     "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/CueAssistant.swift",
-    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PremiumPacksView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/FieldPostcardReviewView.swift",
     "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/Models.swift",
-    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PremiumQuestStore.swift",
-    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/TrailArchiveView.swift",
-    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/QuestDeckView.swift",
-    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/Theme.swift",
     "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/ObservationCaptureView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PocketBiomeQuestApp.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PostcardDetailView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PremiumPacksView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PremiumQuestStore.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PrivacyOnboardingView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/QuestDeckView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/RootView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/Theme.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/TrailArchiveView.swift",
     "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuestTests/PocketBiomeQuestTests.swift"
   ],
   "runtime_self_check_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/evidence/runtime_self_check.json",
@@ -48,7 +48,7 @@
       "source_evidence_patterns": [
         "HabitatGlyph",
         "photo.on.rectangle",
-        "Field notebook postcard",
+        "FIELD POSTCARD",
         "Sidewalk micro-safari hero image slot"
       ],
       "missing_patterns": []
@@ -77,7 +77,7 @@
       "status": "pass",
       "source_evidence_patterns": [
         "local-only storage",
-        "NSPhotoLibraryUsageDescription",
+        "INFOPLIST_KEY_NSPhotoLibraryUsageDescription",
         "Privacy Locale Lock"
       ],
       "missing_patterns": []
@@ -88,6 +88,8 @@
       "source_evidence_patterns": [
         "import StoreKit",
         "Product.products",
+        "product.purchase",
+        "AppStore.sync",
         "Restore purchase",
         "StoreKit unavailable. Free quests still work."
       ],
@@ -98,7 +100,7 @@
       "status": "pass",
       "source_evidence_patterns": [
         "CueAssistant",
-        "Editable local cue chips",
+        "Suggest editable chips",
         "Edit or skip"
       ],
       "missing_patterns": []
@@ -117,9 +119,5 @@
   "locale_scan": {
     "source_files_with_cjk": [],
     "status": "pass"
-  },
-  "invalid_symbol_scan": {
-    "postcard_system_symbol_remaining": false,
-    "xcode_log_invalid_postcard_symbol": false
   }
 }

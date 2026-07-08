@@ -12,7 +12,7 @@
       "command": "xcodebuild test -project PocketBiomeQuest.xcodeproj -scheme PocketBiomeQuest -destination 'platform=iOS Simulator,name=iPhone 17' -derivedDataPath DerivedData",
       "exit_code": 0,
       "log_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/evidence/xcodebuild-test.log",
-      "xcresult_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/DerivedData/Logs/Test/Test-PocketBiomeQuest-2026.07.08_22-44-40-+0800.xcresult"
+      "xcresult_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/DerivedData/Logs/Test/Test-PocketBiomeQuest-2026.07.08_23-05-02-+0800.xcresult"
     },
     {
       "command": "xcodebuild build -project PocketBiomeQuest.xcodeproj -scheme PocketBiomeQuest -destination 'platform=iOS Simulator,name=iPhone 17' -derivedDataPath DerivedData",

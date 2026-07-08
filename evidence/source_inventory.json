@@ -1,7 +1,12 @@
 {
   "schema_version": "appfactory.source_inventory.v1",
-  "file_count": 35,
+  "file_count": 48,
   "files": [
+    {
+      "path": ".DS_Store",
+      "bytes": 6148,
+      "sha256": "d6b061520fbe2c51f0cf88da92c55064010042681c30dc955d054722797105ab"
+    },
     {
       "path": ".gitignore",
       "bytes": 53,
@@ -9,8 +14,8 @@
     },
     {
       "path": "PocketBiomeQuest/BiomeAppModel.swift",
-      "bytes": 5107,
-      "sha256": "b92c9492dc713a822dbc07471d396e999e5db64421cac0425df4b9fa4b132a91"
+      "bytes": 5732,
+      "sha256": "6ed0a4877c0c6e0ab7e3b8594984a0a166da30bab61b6217331d4c654b118700"
     },
     {
       "path": "PocketBiomeQuest/BiomeStore.swift",
@@ -49,13 +54,13 @@
     },
     {
       "path": "PocketBiomeQuest/PremiumPacksView.swift",
-      "bytes": 2352,
-      "sha256": "81c4e5bc32cc29fca359bc6e0d24fb7dcf3b723b5153a7b4c4440bd3d57d251d"
+      "bytes": 2607,
+      "sha256": "2c5a805cefd84be1b6affe63d7ff5f4bf2f11b00045baf2e9c7e60502ea948d6"
     },
     {
       "path": "PocketBiomeQuest/PremiumQuestStore.swift",
-      "bytes": 1505,
-      "sha256": "6d7abe2cdb9885fce0b2f6608460ec8a75ab1376dc759516eb1ed7fd795f3c33"
+      "bytes": 6397,
+      "sha256": "6a6b561abc0dc234bb55b6fbdae9c09ed01905c1c72a173c333f2f2342ea364c"
     },
     {
       "path": "PocketBiomeQuest/PrivacyOnboardingView.swift",
@@ -104,23 +109,83 @@
     },
     {
       "path": "evidence/acceptance_readback.json",
-      "bytes": 4216,
-      "sha256": "993732d6202d25ba75d65c8459fca5e2baaf390bb188176686acc38ce0f1d0aa"
+      "bytes": 4139,
+      "sha256": "01d53797a46d5450bfd3fa906ce1bce6c1fdbfc633fc995f54ec66c403c810aa"
+    },
+    {
+      "path": "evidence/gh-auth-status.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/gh-auth-status.log",
+      "bytes": 280,
+      "sha256": "a3d81ac3dc6f0d193205709fc741f3819f7c906203947319502b152cd4361940"
+    },
+    {
+      "path": "evidence/gh-repo-create.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/gh-repo-create.log",
+      "bytes": 204,
+      "sha256": "ced3ebfec8f8e0e4ab6d425dba2b7af3eadba97075b4acf98154eb53818a8e3f"
+    },
+    {
+      "path": "evidence/gh-repo-view.err",
+      "bytes": 117,
+      "sha256": "7b4231deced858a026b6bf20318824b0645985191de1d2a21400131076f33d3d"
+    },
+    {
+      "path": "evidence/gh-repo-view.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "evidence/gh-repo-view.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/gh-version.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/gh-version.log",
+      "bytes": 79,
+      "sha256": "41fe4321c07dc354b52baec89c9c5921a2a313cfc2848ca4b7a1ebcc0d8e58b4"
+    },
+    {
+      "path": "evidence/git-push-final.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/git-push-final.log",
+      "bytes": 96,
+      "sha256": "02b4fd50d1de6b63ffeabe611826c0aa85bae12dfbba7477530f1fa076271d04"
     },
     {
       "path": "evidence/runtime_self_check.json",
-      "bytes": 2505,
-      "sha256": "c661ffcfb46a8edb3be214959404abd454c09098b5ab163b403ee99372f4d8ba"
+      "bytes": 2504,
+      "sha256": "2c1e2eb90bea251f6ca67ebea632249c907fed9c55cd406a402929497837b6bd"
     },
     {
       "path": "evidence/simctl-bootstatus.log",
-      "bytes": 116,
-      "sha256": "b802b073b0f2404101c7d48f6c1990b83f70ace1c22be6c07bab5a4b2ff245b5"
+      "bytes": 629,
+      "sha256": "d1e8e26217147d9eae0076ecf26fca155b3e71dd1497eea5e255b6173acfbbfa"
     },
     {
       "path": "evidence/simctl-devices-summary.json",
       "bytes": 1365,
-      "sha256": "f9a62167f52d5386ad28b8625c34f4a301755f10d35381ef4d7acd48cc1cfb1c"
+      "sha256": "558cc380947df4b11bf71fddad4b88c36bb73c46c3679071464fcaf306979c40"
+    },
+    {
+      "path": "evidence/simctl-devices.json",
+      "bytes": 8729,
+      "sha256": "b934181e43473120ee3921ba4fab77e9c1420e147f142217b3ecfeeead5f157c"
     },
     {
       "path": "evidence/simctl-install.exit",
@@ -140,12 +205,12 @@
     {
       "path": "evidence/simctl-launch.log",
       "bytes": 39,
-      "sha256": "7559ea4bd90e278659511817102a6aec3ee8ceb54ed3fea560f08200d645ca94"
+      "sha256": "fd89f07cb547fdac1fb9afe3e0a4698a99edd6edc0ac4e4718085f8174d3cfd4"
     },
     {
       "path": "evidence/source_inventory.json",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "bytes": 8040,
+      "sha256": "1dfdc416382caff943390863b8629457cc0cf25c53102ee861f7af1c45dcc250"
     },
     {
       "path": "evidence/xcodebuild-build.exit",
@@ -155,7 +220,7 @@
     {
       "path": "evidence/xcodebuild-build.log",
       "bytes": 18181,
-      "sha256": "c8c7d2c1a12f5dea4937a621b7c3e4b4c3b6679fb9356d10b30af5b6d868b39c"
+      "sha256": "1fe8f3e0891b9bfd66ba8053f824ad5272fc2f00024886c140e83cf380bcecab"
     },
     {
       "path": "evidence/xcodebuild-list.txt",
@@ -169,8 +234,8 @@
     },
     {
       "path": "evidence/xcodebuild-test.log",
-      "bytes": 48853,
-      "sha256": "bfbfa43c5f4b07fee271f7e5a71ff4159fc63ca4956d61c6415405a459af4bde"
+      "bytes": 87404,
+      "sha256": "6113824036f26bf1b54167dda4f947cdae0f5a0e94f9ad03f077a78ba47552f2"
     },
     {
       "path": "ios/package_manifest.json",

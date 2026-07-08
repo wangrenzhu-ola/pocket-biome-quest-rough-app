@@ -1,0 +1,57 @@
+{
+  "schema_version": "appfactory.next_version_pain_solution_matrix.v1",
+  "product_name": "Pocket Biome Quest",
+  "target_version": "0.0.2",
+  "baseline_version": "0.0.1",
+  "selected_direction": "Neighborhood Almanac",
+  "source_refs": [
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/rough_app_runs/goal-001-57f8d270f0/rough_app_build.json",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/factory_production_queue/factory-group-20260708202458-7f3037f9/pm-docs-q-20260708202458-6c897faa/PMAgent/product_goal_bundles/goal-001/pain_to_feature_map.json",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/factory_production_queue/factory-group-20260708202458-7f3037f9/pm-docs-q-20260708202458-6c897faa/PMAgent/product_goal_bundles/goal-001/market_signal_audit.json"
+  ],
+  "pain_points": [
+    {
+      "pain_id": "PAIN-PLAN-001",
+      "pain": "The user wants a short walk but still has to choose isolated quest cards one by one.",
+      "next_version_solution": "Micro-Safari Trail Plan bundles three quests into a short local plan.",
+      "feature_ids": ["NVT-001"],
+      "acceptance_ids": ["REQ-NVT-PLAN-001"]
+    },
+    {
+      "pain_id": "PAIN-CONFIDENCE-001",
+      "pain": "The user may not know what counts as a good non-species observation.",
+      "next_version_solution": "Noticing Rubric gives texture, edge, motion, color, sound, and pattern examples.",
+      "feature_ids": ["NVT-002"],
+      "acceptance_ids": ["REQ-NVT-RUBRIC-001"]
+    },
+    {
+      "pain_id": "PAIN-MEMORY-001",
+      "pain": "Saved postcards are useful records but do not yet create a repeatable reflection loop.",
+      "next_version_solution": "Trail Almanac creates weekly habitat recap, color swatches, and next habitat prompts.",
+      "feature_ids": ["NVT-003"],
+      "acceptance_ids": ["REQ-NVT-ALMANAC-001"]
+    },
+    {
+      "pain_id": "PAIN-FAMILY-001",
+      "pain": "Parent-child or walking-buddy use is implied but not explicitly supported.",
+      "next_version_solution": "Two-Person Quest Mode adds Spotter and Storyteller role prompts without accounts.",
+      "feature_ids": ["NVT-004"],
+      "acceptance_ids": ["REQ-NVT-FAMILY-001"]
+    },
+    {
+      "pain_id": "PAIN-PREMIUM-001",
+      "pain": "Premium packs need clearer experiential value before purchase.",
+      "next_version_solution": "Seasonal Field Pack Preview shows sample quest chains and visual territory while keeping free core open.",
+      "feature_ids": ["NVT-005"],
+      "acceptance_ids": ["REQ-NVT-PACK-001"]
+    }
+  ],
+  "blocked_or_deferred": [],
+  "privacy_boundaries": [
+    "no GPS or location permission",
+    "no backend or login",
+    "no cloud AI or Kimi key",
+    "no species certainty claims",
+    "no social community claims"
+  ]
+}

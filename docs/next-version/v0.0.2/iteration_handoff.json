@@ -1,0 +1,16 @@
+{
+  "schema_version": "appfactory.next_version_iteration_handoff.v1",
+  "status": "draft_ready_for_implementation",
+  "product_name": "Pocket Biome Quest",
+  "baseline_version": "0.0.1",
+  "target_version": "0.0.2",
+  "selected_direction": "Neighborhood Almanac",
+  "output_refs": [
+    "docs/next-version/v0.0.2/product_design_iteration.md",
+    "docs/next-version/v0.0.2/creative_production_brief.md",
+    "docs/next-version/v0.0.2/pain_solution_matrix.json",
+    "docs/next-version/v0.0.2/acceptance_matrix_v0.0.2.json"
+  ],
+  "blockers": [],
+  "handoff_next": "Implementation can start with TrailPlan model/store tests, then Micro-Safari Trail Plan UI."
+}

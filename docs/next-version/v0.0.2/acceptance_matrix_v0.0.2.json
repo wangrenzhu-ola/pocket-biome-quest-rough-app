@@ -1,0 +1,78 @@
+{
+  "schema_version": "appfactory.acceptance_matrix.v1",
+  "product_name": "Pocket Biome Quest",
+  "target_version": "0.0.2",
+  "locale_requirement": "English (United States) / en-US",
+  "requirements": [
+    {
+      "requirement_id": "REQ-NVT-PLAN-001",
+      "user_visible": true,
+      "required_ui_paths": ["Quest Deck", "Micro-Safari Trail Plan", "Plan quest completion"],
+      "required_source_evidence": ["TrailPlan model", "reachable SwiftUI plan composer", "no GPS permission"],
+      "required_test_evidence": ["unit tests for plan creation and completion"],
+      "required_runtime_evidence": ["simulator walkthrough creates a 3-card plan and completes one quest"],
+      "pass_condition": "User can create and complete a local 3-card trail plan without GPS or backend.",
+      "blocker_if_missing": "next_version_trail_plan_missing"
+    },
+    {
+      "requirement_id": "REQ-NVT-RUBRIC-001",
+      "user_visible": true,
+      "required_ui_paths": ["Observation Capture", "Noticing Rubric", "Editable local cue chips"],
+      "required_source_evidence": ["rubric component", "editable suggestion state", "manual fallback copy"],
+      "required_test_evidence": ["suggestion edit/skip tests"],
+      "required_runtime_evidence": ["runtime evidence rubric appears and suggestions remain editable"],
+      "pass_condition": "User can understand what to observe without species identification and can edit or skip suggestions.",
+      "blocker_if_missing": "next_version_noticing_rubric_missing"
+    },
+    {
+      "requirement_id": "REQ-NVT-ALMANAC-001",
+      "user_visible": true,
+      "required_ui_paths": ["Trail Archive", "Weekly Almanac", "Habitat recap"],
+      "required_source_evidence": ["AlmanacWeek model or computed recap", "color swatch summary", "suggested next habitats"],
+      "required_test_evidence": ["almanac computation tests", "persistence readback tests"],
+      "required_runtime_evidence": ["relaunch readback shows weekly almanac from saved postcards"],
+      "pass_condition": "Saved postcards generate a local weekly almanac and next-habitat prompt.",
+      "blocker_if_missing": "next_version_almanac_missing"
+    },
+    {
+      "requirement_id": "REQ-NVT-FAMILY-001",
+      "user_visible": true,
+      "required_ui_paths": ["Observation Capture", "Two-Person Quest Mode", "Spotter/Storyteller prompts"],
+      "required_source_evidence": ["role prompt state", "accessibility labels", "no account requirement"],
+      "required_test_evidence": ["role prompt copy/static tests"],
+      "required_runtime_evidence": ["runtime evidence role prompts can be toggled"],
+      "pass_condition": "Two people can share a quest using local role prompts without account or community features.",
+      "blocker_if_missing": "next_version_family_mode_missing"
+    },
+    {
+      "requirement_id": "REQ-NVT-PACK-001",
+      "user_visible": true,
+      "required_ui_paths": ["Premium Quest Packs", "Seasonal preview", "Purchase", "Restore", "StoreKit unavailable"],
+      "required_source_evidence": ["seasonal pack preview cards", "StoreKit purchase/restore remains wired", "free core not paywalled"],
+      "required_test_evidence": ["premium state tests", "free flow availability test"],
+      "required_runtime_evidence": ["runtime evidence preview visible and unavailable state does not block free quests"],
+      "pass_condition": "Premium packs communicate value before purchase while free Micro-Safari flow remains usable.",
+      "blocker_if_missing": "next_version_premium_preview_missing"
+    },
+    {
+      "requirement_id": "REQ-NVT-PRIVACY-001",
+      "user_visible": true,
+      "required_ui_paths": ["Privacy", "Trail Plan", "Observation Capture"],
+      "required_source_evidence": ["no GPS entitlement", "no backend client", "no cloud AI key", "privacy copy"],
+      "required_test_evidence": ["static privacy/capability scan"],
+      "required_runtime_evidence": ["runtime privacy copy remains visible"],
+      "pass_condition": "The new version adds no GPS, backend, cloud AI, community, or species-certainty claims.",
+      "blocker_if_missing": "next_version_privacy_boundary_missing"
+    },
+    {
+      "requirement_id": "REQ-NVT-LOCALE-001",
+      "user_visible": true,
+      "required_ui_paths": ["All new screens", "Accessibility labels", "Premium/privacy copy"],
+      "required_source_evidence": ["en-US strings or literals", "no CJK in Swift user-visible copy"],
+      "required_test_evidence": ["locale/static copy scan"],
+      "required_runtime_evidence": ["runtime walkthrough in English (US)"],
+      "pass_condition": "All user-visible text remains English (United States).",
+      "blocker_if_missing": "app_locale_en_us_missing"
+    }
+  ]
+}

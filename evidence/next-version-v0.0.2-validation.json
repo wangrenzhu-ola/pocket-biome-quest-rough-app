@@ -1,0 +1,199 @@
+{
+  "schema_version": "appfactory.next_version_iteration_validation.v1",
+  "status": "pass",
+  "baseline_commit": "e1730350d7acf30502f039d46943c099a2c0ab3a",
+  "validated_refs": [
+    "docs/next-version/v0.0.2/product_design_iteration.md",
+    "docs/next-version/v0.0.2/creative_production_brief.md",
+    "docs/next-version/v0.0.2/pain_solution_matrix.json",
+    "docs/next-version/v0.0.2/acceptance_matrix_v0.0.2.json",
+    "docs/next-version/v0.0.2/iteration_handoff.json"
+  ],
+  "checks": [
+    {
+      "name": "exists:product_design_iteration.md",
+      "ok": true,
+      "detail": {
+        "bytes": 7882
+      }
+    },
+    {
+      "name": "exists:creative_production_brief.md",
+      "ok": true,
+      "detail": {
+        "bytes": 4539
+      }
+    },
+    {
+      "name": "exists:pain_solution_matrix.json",
+      "ok": true,
+      "detail": {
+        "bytes": 2770
+      }
+    },
+    {
+      "name": "exists:acceptance_matrix_v0.0.2.json",
+      "ok": true,
+      "detail": {
+        "bytes": 4704
+      }
+    },
+    {
+      "name": "exists:iteration_handoff.json",
+      "ok": true,
+      "detail": {
+        "bytes": 660
+      }
+    },
+    {
+      "name": "json_parse:pain_solution_matrix.json",
+      "ok": true,
+      "detail": "appfactory.next_version_pain_solution_matrix.v1"
+    },
+    {
+      "name": "json_parse:acceptance_matrix_v0.0.2.json",
+      "ok": true,
+      "detail": "appfactory.acceptance_matrix.v1"
+    },
+    {
+      "name": "json_parse:iteration_handoff.json",
+      "ok": true,
+      "detail": "appfactory.next_version_iteration_handoff.v1"
+    },
+    {
+      "name": "feature_count_ge_5",
+      "ok": true,
+      "detail": [
+        "NVT-001",
+        "NVT-002",
+        "NVT-003",
+        "NVT-004",
+        "NVT-005"
+      ]
+    },
+    {
+      "name": "pain_count_ge_5",
+      "ok": true,
+      "detail": 5
+    },
+    {
+      "name": "pain_acceptance_ids_in_matrix",
+      "ok": true,
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "name": "privacy_boundary_present",
+      "ok": true,
+      "detail": [
+        "no GPS or location permission",
+        "no backend or login",
+        "no cloud AI or Kimi key",
+        "no species certainty claims",
+        "no social community claims"
+      ]
+    },
+    {
+      "name": "locale_boundary_present",
+      "ok": true,
+      "detail": [
+        "REQ-NVT-ALMANAC-001",
+        "REQ-NVT-FAMILY-001",
+        "REQ-NVT-LOCALE-001",
+        "REQ-NVT-PACK-001",
+        "REQ-NVT-PLAN-001",
+        "REQ-NVT-PRIVACY-001",
+        "REQ-NVT-RUBRIC-001"
+      ]
+    },
+    {
+      "name": "product_phrase:Micro-Safari Trail Plan",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "product_phrase:Noticing Rubric",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "product_phrase:Trail Almanac",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "product_phrase:Two-Person Quest Mode",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "product_phrase:Seasonal Field Pack Preview",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "creative_phrase:Neighborhood Almanac",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "creative_phrase:Field Cabinet Calm",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "creative_phrase:Sidewalk Safari Energy",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "creative_phrase:Seasonal Pack Theatre",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "creative_phrase:Avoid list",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "handoff_status_ready",
+      "ok": true,
+      "detail": "draft_ready_for_implementation"
+    },
+    {
+      "name": "copy_bank_nonempty",
+      "ok": true,
+      "detail": [
+        "Build a 15-minute micro-safari",
+        "Pick three tiny habitats for this walk",
+        "Next tiny stop",
+        "Describe the clue, not the species",
+        "Spotter prompt",
+        "Storyteller prompt",
+        "This week’s pocket almanac",
+        "You have not explored puddle edges yet",
+        "Preview this seasonal field pack",
+        "Free quests stay open"
+      ]
+    },
+    {
+      "name": "copy_bank_no_cjk",
+      "ok": true,
+      "detail": [
+        "Build a 15-minute micro-safari",
+        "Pick three tiny habitats for this walk",
+        "Next tiny stop",
+        "Describe the clue, not the species",
+        "Spotter prompt",
+        "Storyteller prompt",
+        "This week’s pocket almanac",
+        "You have not explored puddle edges yet",
+        "Preview this seasonal field pack",
+        "Free quests stay open"
+      ]
+    }
+  ],
+  "blockers": []
+}

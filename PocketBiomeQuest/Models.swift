@@ -106,6 +106,39 @@ struct PremiumPackState: Identifiable, Codable, Equatable {
     var restoreState: String
 }
 
+struct TrailPlan: Identifiable, Codable, Equatable, Hashable {
+    var id: UUID
+    var title: String
+    var estimatedMinutes: Int
+    var questIds: [UUID]
+    var habitatMix: [HabitatTag]
+    var createdAt: Date
+    var completedQuestIds: [UUID]
+
+    var isComplete: Bool {
+        !questIds.isEmpty && Set(completedQuestIds).isSuperset(of: questIds)
+    }
+
+    func containsCompletedQuest(_ questId: UUID) -> Bool {
+        completedQuestIds.contains(questId)
+    }
+}
+
+struct AlmanacWeek: Identifiable, Codable, Equatable {
+    var id: String
+    var postcardIds: [UUID]
+    var habitatCounts: [HabitatTag: Int]
+    var colorSwatches: [String]
+    var suggestedNextHabitats: [HabitatTag]
+
+    var postcardCount: Int { postcardIds.count }
+}
+
+struct QuestRolePrompt: Codable, Equatable, Hashable {
+    var spotterPrompt: String
+    var storytellerPrompt: String
+}
+
 struct PrivacyPreference: Codable, Equatable {
     var photoAccessStatus: String
     var localOnlyAcknowledged: Bool

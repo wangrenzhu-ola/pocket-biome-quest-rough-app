@@ -1,0 +1,117 @@
+{
+  "schema_version": "appfactory.acceptance_readback.v1",
+  "target_version": "0.0.2",
+  "product_name": "Pocket Biome Quest",
+  "source_refs": [
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PrivacyOnboardingView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PocketBiomeQuestApp.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/FieldPostcardReviewView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PostcardDetailView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/RootView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/BiomeStore.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/BiomeAppModel.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/CueAssistant.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PremiumPacksView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/Models.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/PremiumQuestStore.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/TrailArchiveView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/QuestDeckView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/Theme.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest/ObservationCaptureView.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuestTests/PocketBiomeQuestTests.swift",
+    "/Users/wangrenzhu/work/PocketBiomeQuest/PocketBiomeQuest.xcodeproj/project.pbxproj"
+  ],
+  "runtime_self_check_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/evidence/runtime_self_check_v0.0.2.json",
+  "requirement_results": [
+    {
+      "requirement_id": "REQ-NVT-PLAN-001",
+      "status": "pass",
+      "source_evidence_patterns": [
+        "struct TrailPlan",
+        "createTrailPlan",
+        "TrailPlanDetailView",
+        "completeQuest",
+        "No GPS"
+      ],
+      "missing_patterns": []
+    },
+    {
+      "requirement_id": "REQ-NVT-RUBRIC-001",
+      "status": "pass",
+      "source_evidence_patterns": [
+        "NoticingRubricView",
+        "Describe the clue, not the species",
+        "Suggest editable chips",
+        "skip suggestions"
+      ],
+      "missing_patterns": []
+    },
+    {
+      "requirement_id": "REQ-NVT-ALMANAC-001",
+      "status": "pass",
+      "source_evidence_patterns": [
+        "struct AlmanacWeek",
+        "currentAlmanacWeek",
+        "This week\u2019s pocket almanac",
+        "Color palette"
+      ],
+      "missing_patterns": []
+    },
+    {
+      "requirement_id": "REQ-NVT-FAMILY-001",
+      "status": "pass",
+      "source_evidence_patterns": [
+        "struct QuestRolePrompt",
+        "Two-Person Quest Mode",
+        "Spotter prompt",
+        "Storyteller prompt"
+      ],
+      "missing_patterns": []
+    },
+    {
+      "requirement_id": "REQ-NVT-PACK-001",
+      "status": "pass",
+      "source_evidence_patterns": [
+        "SeasonalPackPreview",
+        "Preview this seasonal field pack",
+        "product.purchase",
+        "AppStore.sync",
+        "Free quests stay open"
+      ],
+      "missing_patterns": []
+    },
+    {
+      "requirement_id": "REQ-NVT-PRIVACY-001",
+      "status": "pass",
+      "source_evidence_patterns": [
+        "No GPS",
+        "No live recommendations, community feed, species identification, or cloud AI",
+        "INFOPLIST_KEY_NSPhotoLibraryUsageDescription"
+      ],
+      "missing_patterns": []
+    },
+    {
+      "requirement_id": "REQ-NVT-LOCALE-001",
+      "status": "pass",
+      "source_evidence_patterns": [
+        "Micro-Safari Trail Plan",
+        "Noticing Rubric",
+        "Two-Person Quest Mode",
+        "Premium Quest Packs"
+      ],
+      "missing_patterns": []
+    }
+  ],
+  "locale_scan": {
+    "source_files_with_cjk": [],
+    "status": "pass"
+  },
+  "privacy_static_scan": {
+    "location_permission_keys": [],
+    "backend_client_patterns": [],
+    "positive_forbidden_claim_scan": [
+      "community post"
+    ]
+  },
+  "status": "pass"
+}

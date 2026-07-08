@@ -17,6 +17,38 @@ struct BiomeSnapshot: Codable, Equatable {
     var drafts: [ObservationDraft]
     var privacy: PrivacyPreference
     var premiumPacks: [PremiumPackState]
+    var trailPlans: [TrailPlan]
+
+    init(
+        postcards: [FieldPostcard],
+        drafts: [ObservationDraft],
+        privacy: PrivacyPreference,
+        premiumPacks: [PremiumPackState],
+        trailPlans: [TrailPlan] = []
+    ) {
+        self.postcards = postcards
+        self.drafts = drafts
+        self.privacy = privacy
+        self.premiumPacks = premiumPacks
+        self.trailPlans = trailPlans
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case postcards
+        case drafts
+        case privacy
+        case premiumPacks
+        case trailPlans
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        postcards = try container.decodeIfPresent([FieldPostcard].self, forKey: .postcards) ?? []
+        drafts = try container.decodeIfPresent([ObservationDraft].self, forKey: .drafts) ?? []
+        privacy = try container.decodeIfPresent(PrivacyPreference.self, forKey: .privacy) ?? .defaultValue
+        premiumPacks = try container.decodeIfPresent([PremiumPackState].self, forKey: .premiumPacks) ?? PremiumQuestStore.defaultPacks
+        trailPlans = try container.decodeIfPresent([TrailPlan].self, forKey: .trailPlans) ?? []
+    }
 }
 
 final class BiomeStore {
@@ -32,7 +64,7 @@ final class BiomeStore {
 
     func load() throws -> BiomeSnapshot {
         guard FileManager.default.fileExists(atPath: fileURL.path) else {
-            return BiomeSnapshot(postcards: [], drafts: [], privacy: .defaultValue, premiumPacks: PremiumQuestStore.defaultPacks)
+            return BiomeSnapshot(postcards: [], drafts: [], privacy: .defaultValue, premiumPacks: PremiumQuestStore.defaultPacks, trailPlans: [])
         }
         let data = try Data(contentsOf: fileURL)
         return try JSONDecoder.biome.decode(BiomeSnapshot.self, from: data)

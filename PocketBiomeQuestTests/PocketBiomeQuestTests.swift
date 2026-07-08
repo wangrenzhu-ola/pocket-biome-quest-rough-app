@@ -70,6 +70,71 @@ final class PocketBiomeQuestTests: XCTestCase {
         XCTAssertFalse(PrivacyPreference.defaultValue.localOnlyAcknowledged)
     }
 
+    func testTrailPlanCreationCompletionAndPersistence() throws {
+        let directory = tempDirectory()
+        let model = BiomeAppModel(store: BiomeStore(directory: directory))
+
+        let plan = model.createTrailPlan(minutes: 15)
+
+        XCTAssertEqual(plan.estimatedMinutes, 15)
+        XCTAssertEqual(plan.questIds.count, 3)
+        XCTAssertEqual(plan.habitatMix.count, 3)
+        XCTAssertTrue(model.quests(for: plan).allSatisfy { !$0.isPremium })
+
+        let firstQuest = model.quests(for: plan)[0]
+        model.completeQuest(firstQuest, in: plan)
+        XCTAssertTrue(model.currentTrailPlan(matching: plan).containsCompletedQuest(firstQuest.id))
+
+        let relaunch = BiomeAppModel(store: BiomeStore(directory: directory))
+        XCTAssertEqual(relaunch.trailPlans.count, 1)
+        XCTAssertTrue(relaunch.currentTrailPlan(matching: plan).containsCompletedQuest(firstQuest.id))
+    }
+
+    func testAlmanacWeekSummarizesPostcardsAndSuggestsNextHabitats() throws {
+        let model = BiomeAppModel(store: BiomeStore(directory: tempDirectory()))
+        var mossDraft = model.startDraft(for: QuestCard.seedQuests[0])
+        mossDraft.placeClue = "stone wall by the bus stop"
+        mossDraft.textureTags = ["velvet patch"]
+        mossDraft.colorTags = ["lichen green"]
+        mossDraft.discoverySentence = "The moss made three soft greens."
+        XCTAssertTrue(model.savePostcard(from: mossDraft))
+
+        var barkDraft = model.startDraft(for: QuestCard.seedQuests[1])
+        barkDraft.placeClue = "sycamore at the corner"
+        barkDraft.textureTags = ["ridged"]
+        barkDraft.colorTags = ["soil brown"]
+        barkDraft.discoverySentence = "The bark looked like a small map."
+        XCTAssertTrue(model.savePostcard(from: barkDraft))
+
+        let almanac = model.currentAlmanacWeek()
+        XCTAssertEqual(almanac.postcardCount, 2)
+        XCTAssertEqual(almanac.habitatCounts[.moss], 1)
+        XCTAssertEqual(almanac.habitatCounts[.bark], 1)
+        XCTAssertTrue(almanac.colorSwatches.contains("lichen green"))
+        XCTAssertTrue(almanac.suggestedNextHabitats.contains(.pollinator))
+    }
+
+    func testTwoPersonRolePromptsStayLocalAndNonSpeciesSpecific() {
+        let model = BiomeAppModel(store: BiomeStore(directory: tempDirectory()))
+        let prompt = model.rolePrompt(for: QuestCard.seedQuests[0])
+
+        XCTAssertTrue(prompt.spotterPrompt.contains("Spotter prompt"))
+        XCTAssertTrue(prompt.storytellerPrompt.contains("Storyteller prompt"))
+        XCTAssertTrue(prompt.spotterPrompt.contains("before anyone names a species"))
+        XCTAssertFalse(prompt.spotterPrompt.localizedCaseInsensitiveContains("account"))
+        XCTAssertFalse(prompt.storytellerPrompt.localizedCaseInsensitiveContains("community"))
+    }
+
+    func testSeasonalPackPreviewAndFreeCoreAvailability() {
+        let model = BiomeAppModel(store: BiomeStore(directory: tempDirectory()))
+        let preview = SeasonalPackPreview.preview(for: "pocketbiome.seasonal.lichen")
+
+        XCTAssertEqual(preview.sampleChain.count, 3)
+        XCTAssertTrue(preview.caption.contains("Free quests stay open"))
+        XCTAssertGreaterThanOrEqual(model.quests.filter { !$0.isPremium }.count, 3)
+        XCTAssertTrue(PremiumQuestStore.defaultPacks.allSatisfy { $0.entitlementState == .unavailable })
+    }
+
     private func tempDirectory() -> URL {
         let url = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString, isDirectory: true)
         try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)

@@ -1,0 +1,328 @@
+{
+  "schema_version": "appfactory.source_inventory.v1",
+  "target_version": "0.0.2",
+  "file_count": 64,
+  "self_excluded": "evidence/source_inventory_v0.0.2.json",
+  "files": [
+    {
+      "path": ".DS_Store",
+      "bytes": 6148,
+      "sha256": "d6b061520fbe2c51f0cf88da92c55064010042681c30dc955d054722797105ab"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 53,
+      "sha256": "4944d271112f025176f29830c36a646b83bb3ca1c36090a22480f4fd35ab92d3"
+    },
+    {
+      "path": "PocketBiomeQuest/BiomeAppModel.swift",
+      "bytes": 8638,
+      "sha256": "930d83d3edd8355ff3704c50c8538257d7a081c9a8190356ca41bb6431ed959e"
+    },
+    {
+      "path": "PocketBiomeQuest/BiomeStore.swift",
+      "bytes": 3493,
+      "sha256": "406dd18886afb54f42082629b0f6351badeeed576965c13d4d42f8d177cb8277"
+    },
+    {
+      "path": "PocketBiomeQuest/CueAssistant.swift",
+      "bytes": 1420,
+      "sha256": "551a56312f2550f3c953c5fe1f252917490782efc4781a33fae9bcb9d05d54b5"
+    },
+    {
+      "path": "PocketBiomeQuest/FieldPostcardReviewView.swift",
+      "bytes": 4805,
+      "sha256": "f6e6abe180033dc2e48f74ad36a6bcb27e4ab1361ee89e7d34d70f2d04ee2017"
+    },
+    {
+      "path": "PocketBiomeQuest/Models.swift",
+      "bytes": 5676,
+      "sha256": "6b7ce0ba709ab53e3bda21b2a3425cfb294caccf105b5d6e5aa53a330cff16d9"
+    },
+    {
+      "path": "PocketBiomeQuest/ObservationCaptureView.swift",
+      "bytes": 8949,
+      "sha256": "585d36beb1e9b0fe5ba57feb2baf3a8b6750d1e0bde01dc003294564bf73a996"
+    },
+    {
+      "path": "PocketBiomeQuest/PocketBiomeQuestApp.swift",
+      "bytes": 230,
+      "sha256": "00402d3b3c6cd36948f4ff8c47f327f8cad6db0a5760b30244928ce1e9658def"
+    },
+    {
+      "path": "PocketBiomeQuest/PostcardDetailView.swift",
+      "bytes": 2552,
+      "sha256": "fc66562e7c20236ccbf85f4f7372bced2ad5625a436488f11e3a347325b0e8f8"
+    },
+    {
+      "path": "PocketBiomeQuest/PremiumPacksView.swift",
+      "bytes": 6135,
+      "sha256": "3b3d505776e790d06ed160dd34f9008a253c82f4f57bc3fc897c2e946b73d932"
+    },
+    {
+      "path": "PocketBiomeQuest/PremiumQuestStore.swift",
+      "bytes": 6397,
+      "sha256": "6a6b561abc0dc234bb55b6fbdae9c09ed01905c1c72a173c333f2f2342ea364c"
+    },
+    {
+      "path": "PocketBiomeQuest/PrivacyOnboardingView.swift",
+      "bytes": 2669,
+      "sha256": "773490ba935a0c9ff87b0102ed5fcfa1cc8242d68172dfddfffd94f4f4aab513"
+    },
+    {
+      "path": "PocketBiomeQuest/QuestDeckView.swift",
+      "bytes": 9742,
+      "sha256": "eb30c7d537d63ad677ce914567b3f060d612f17d9ccff72a4abe9b6df1fd892e"
+    },
+    {
+      "path": "PocketBiomeQuest/RootView.swift",
+      "bytes": 1623,
+      "sha256": "05876ff926d1ce5fbb19b6566fde667ccb592099ce1b4c042ac07a83264e1955"
+    },
+    {
+      "path": "PocketBiomeQuest/Theme.swift",
+      "bytes": 1658,
+      "sha256": "bc8ea29d582134c5109ebc7ac4525b56408bc5146375e81b89f57464829ff0e5"
+    },
+    {
+      "path": "PocketBiomeQuest/TrailArchiveView.swift",
+      "bytes": 6428,
+      "sha256": "7a58233c32ec52777e356ce8e74cbbcc5ede9f9638eeaa8de395fb2105a0122b"
+    },
+    {
+      "path": "PocketBiomeQuest.xcodeproj/project.pbxproj",
+      "bytes": 23811,
+      "sha256": "275e276714f964c01663a01f2061bc2e86701d10be28ed61c18f7d876b4a7505"
+    },
+    {
+      "path": "PocketBiomeQuest.xcodeproj/xcshareddata/xcschemes/PocketBiomeQuest.xcscheme",
+      "bytes": 3762,
+      "sha256": "3c897774e82dfd51241dcb0925c33f0cdfebe33a78ee0d09eede396cb2014b4f"
+    },
+    {
+      "path": "PocketBiomeQuestTests/PocketBiomeQuestTests.swift",
+      "bytes": 7037,
+      "sha256": "a6bac89c277ddedd71d931ce8bfc02b27d6f16db259eecde4b8dd202b71ad0e0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 188,
+      "sha256": "60a852cf9f36a67fcfe3f89ba09b09d7637330cbf2e304497179676d8da99775"
+    },
+    {
+      "path": "docs/next-version/v0.0.2/acceptance_matrix_v0.0.2.json",
+      "bytes": 4704,
+      "sha256": "a4eee2500742283237c9d1b2f3df2ee6ad0bbabfaff119e87082749b9cf1d7f1"
+    },
+    {
+      "path": "docs/next-version/v0.0.2/creative_production_brief.md",
+      "bytes": 4539,
+      "sha256": "bd61b0863760b8d6c540dfb7dc9fe98b0feee831f6e25db840444f472f63825a"
+    },
+    {
+      "path": "docs/next-version/v0.0.2/implementation_result.json",
+      "bytes": 1680,
+      "sha256": "51ae1078e7e8e811028efb97450f379ce2f4087ecb17967d8f264d2a6751424f"
+    },
+    {
+      "path": "docs/next-version/v0.0.2/iteration_handoff.json",
+      "bytes": 660,
+      "sha256": "1b4de451eb5d002fa3933a31baa8ce4b243e388f6aefc0e92a90c51a8eb5f4be"
+    },
+    {
+      "path": "docs/next-version/v0.0.2/pain_solution_matrix.json",
+      "bytes": 2770,
+      "sha256": "0f0051556fb42b87db57d63b0f0ca0a4ef87b1c708247d5da08a98ba45448988"
+    },
+    {
+      "path": "docs/next-version/v0.0.2/product_design_iteration.md",
+      "bytes": 7882,
+      "sha256": "208ce55e30ac55cc6d7922a32f2b8b50a9722428a40b3fb90bfbfac30f7f2da5"
+    },
+    {
+      "path": "evidence/acceptance_readback.json",
+      "bytes": 4139,
+      "sha256": "01d53797a46d5450bfd3fa906ce1bce6c1fdbfc633fc995f54ec66c403c810aa"
+    },
+    {
+      "path": "evidence/acceptance_readback_v0.0.2.json",
+      "bytes": 4090,
+      "sha256": "d84920e1fd611d394eec75da61ac4d302dee8347eb96dac84623536d5c19199f"
+    },
+    {
+      "path": "evidence/gh-auth-status.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/gh-auth-status.log",
+      "bytes": 280,
+      "sha256": "a3d81ac3dc6f0d193205709fc741f3819f7c906203947319502b152cd4361940"
+    },
+    {
+      "path": "evidence/gh-repo-create.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/gh-repo-create.log",
+      "bytes": 204,
+      "sha256": "ced3ebfec8f8e0e4ab6d425dba2b7af3eadba97075b4acf98154eb53818a8e3f"
+    },
+    {
+      "path": "evidence/gh-repo-view.err",
+      "bytes": 117,
+      "sha256": "7b4231deced858a026b6bf20318824b0645985191de1d2a21400131076f33d3d"
+    },
+    {
+      "path": "evidence/gh-repo-view.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "evidence/gh-repo-view.json",
+      "bytes": 175,
+      "sha256": "37150c6abccb2020c5aa2df8a35d791560df12a15f954dc26e9fbda956196a21"
+    },
+    {
+      "path": "evidence/gh-version.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/gh-version.log",
+      "bytes": 79,
+      "sha256": "41fe4321c07dc354b52baec89c9c5921a2a313cfc2848ca4b7a1ebcc0d8e58b4"
+    },
+    {
+      "path": "evidence/git-push-final.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/git-push-final.log",
+      "bytes": 96,
+      "sha256": "02b4fd50d1de6b63ffeabe611826c0aa85bae12dfbba7477530f1fa076271d04"
+    },
+    {
+      "path": "evidence/next-version-v0.0.2-validation.json",
+      "bytes": 4702,
+      "sha256": "b04e83ba273b795f0026c14035f6c1695c1d98e8fcbc788003d5f858036e5e6c"
+    },
+    {
+      "path": "evidence/runtime_self_check.json",
+      "bytes": 2504,
+      "sha256": "2c1e2eb90bea251f6ca67ebea632249c907fed9c55cd406a402929497837b6bd"
+    },
+    {
+      "path": "evidence/runtime_self_check_v0.0.2.json",
+      "bytes": 2236,
+      "sha256": "05b9bbad5dec40adfa18ec21bc3f71f7355df8ccf19f443aa018481a930b2ca6"
+    },
+    {
+      "path": "evidence/simctl-bootstatus-v0.0.2.log",
+      "bytes": 116,
+      "sha256": "b802b073b0f2404101c7d48f6c1990b83f70ace1c22be6c07bab5a4b2ff245b5"
+    },
+    {
+      "path": "evidence/simctl-bootstatus.log",
+      "bytes": 629,
+      "sha256": "d1e8e26217147d9eae0076ecf26fca155b3e71dd1497eea5e255b6173acfbbfa"
+    },
+    {
+      "path": "evidence/simctl-devices-summary-v0.0.2.json",
+      "bytes": 1365,
+      "sha256": "f9a62167f52d5386ad28b8625c34f4a301755f10d35381ef4d7acd48cc1cfb1c"
+    },
+    {
+      "path": "evidence/simctl-devices-summary.json",
+      "bytes": 1365,
+      "sha256": "558cc380947df4b11bf71fddad4b88c36bb73c46c3679071464fcaf306979c40"
+    },
+    {
+      "path": "evidence/simctl-devices-v0.0.2.json",
+      "bytes": 8729,
+      "sha256": "9cda32cdfd628b9ada4d5181d9bf56b8573b8351cd22ee81ec4855ae2857588c"
+    },
+    {
+      "path": "evidence/simctl-devices.json",
+      "bytes": 8729,
+      "sha256": "b934181e43473120ee3921ba4fab77e9c1420e147f142217b3ecfeeead5f157c"
+    },
+    {
+      "path": "evidence/simctl-install-v0.0.2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/simctl-install.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/simctl-install.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/simctl-launch-v0.0.2.log",
+      "bytes": 39,
+      "sha256": "e346168f37ef0b43ea728053628049edb822cd0a7eb0aa43b8d7048d84503f21"
+    },
+    {
+      "path": "evidence/simctl-launch.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/simctl-launch.log",
+      "bytes": 39,
+      "sha256": "fd89f07cb547fdac1fb9afe3e0a4698a99edd6edc0ac4e4718085f8174d3cfd4"
+    },
+    {
+      "path": "evidence/source_inventory.json",
+      "bytes": 7930,
+      "sha256": "8f3010921767116f0c581487aa90256eae7760fdafe4b5d519327a2f9f297ed4"
+    },
+    {
+      "path": "evidence/xcodebuild-build-v0.0.2.log",
+      "bytes": 17436,
+      "sha256": "2e05f5f8f98f657e6621f3e95d3a1413bce508c134c304c80af93bc8dd77c746"
+    },
+    {
+      "path": "evidence/xcodebuild-build.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/xcodebuild-build.log",
+      "bytes": 18181,
+      "sha256": "1fe8f3e0891b9bfd66ba8053f824ad5272fc2f00024886c140e83cf380bcecab"
+    },
+    {
+      "path": "evidence/xcodebuild-list.txt",
+      "bytes": 439,
+      "sha256": "f0826b818981562aeab2a2ce71052e7d840d81a0dff637672f6eabc13341cd16"
+    },
+    {
+      "path": "evidence/xcodebuild-test-v0.0.2.log",
+      "bytes": 90308,
+      "sha256": "cd5cba1218558963b432292b8aed2eda4f788ed9c29967bdd7022729cf2fb6e8"
+    },
+    {
+      "path": "evidence/xcodebuild-test.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "evidence/xcodebuild-test.log",
+      "bytes": 87404,
+      "sha256": "6113824036f26bf1b54167dda4f947cdae0f5a0e94f9ad03f077a78ba47552f2"
+    },
+    {
+      "path": "ios/package_manifest.json",
+      "bytes": 642,
+      "sha256": "785f3d0a1f6606189790ed231f2a5332e282ad49ed582c081a2b25d0d566f219"
+    }
+  ]
+}

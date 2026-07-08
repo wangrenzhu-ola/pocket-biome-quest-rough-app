@@ -16,6 +16,7 @@ final class BiomeAppModel {
     var quests: [QuestCard] = QuestCard.seedQuests
     var postcards: [FieldPostcard] = []
     var drafts: [ObservationDraft] = []
+    var trailPlans: [TrailPlan] = []
     var privacy: PrivacyPreference = .defaultValue
     var premiumPacks: [PremiumPackState] = PremiumQuestStore.defaultPacks
     var inlineError: String?
@@ -42,6 +43,7 @@ final class BiomeAppModel {
             let snapshot = try store.load()
             postcards = snapshot.postcards
             drafts = snapshot.drafts
+            trailPlans = snapshot.trailPlans
             privacy = snapshot.privacy
             premiumPacks = snapshot.premiumPacks.isEmpty ? PremiumQuestStore.defaultPacks : snapshot.premiumPacks
             inlineError = nil
@@ -79,6 +81,71 @@ final class BiomeAppModel {
             placeClue: draft.placeClue,
             discoverySentence: draft.discoverySentence,
             habitat: quest(for: draft.questId)?.habitatTag ?? .moss
+        )
+    }
+
+    func rolePrompt(for quest: QuestCard) -> QuestRolePrompt {
+        QuestRolePrompt(
+            spotterPrompt: "Spotter prompt: find one \(quest.habitatTag.title.lowercased()) clue before anyone names a species.",
+            storytellerPrompt: "Storyteller prompt: describe the texture, color, edge, motion, or sound in one field postcard sentence."
+        )
+    }
+
+    func createTrailPlan(minutes: Int) -> TrailPlan {
+        let freeQuests = quests.filter { !$0.isPremium }
+        let selectedQuests = Array(freeQuests.prefix(3))
+        let plan = TrailPlan(
+            id: UUID(),
+            title: "\(minutes)-minute micro-safari",
+            estimatedMinutes: minutes,
+            questIds: selectedQuests.map(\.id),
+            habitatMix: selectedQuests.map(\.habitatTag),
+            createdAt: Date(),
+            completedQuestIds: []
+        )
+        trailPlans.insert(plan, at: 0)
+        persist()
+        return plan
+    }
+
+    func quests(for plan: TrailPlan) -> [QuestCard] {
+        plan.questIds.compactMap { quest(for: $0) }
+    }
+
+    func completeQuest(_ quest: QuestCard, in plan: TrailPlan) {
+        guard let index = trailPlans.firstIndex(where: { $0.id == plan.id }) else { return }
+        if !trailPlans[index].completedQuestIds.contains(quest.id) {
+            trailPlans[index].completedQuestIds.append(quest.id)
+        }
+        if persist() {
+            successMessage = trailPlans[index].isComplete ? "Micro-safari trail plan complete" : "Next tiny stop is ready"
+        }
+    }
+
+    func currentTrailPlan(matching plan: TrailPlan) -> TrailPlan {
+        trailPlans.first { $0.id == plan.id } ?? plan
+    }
+
+    func currentAlmanacWeek(referenceDate: Date = Date()) -> AlmanacWeek {
+        let calendar = Calendar(identifier: .iso8601)
+        let week = calendar.component(.weekOfYear, from: referenceDate)
+        let year = calendar.component(.yearForWeekOfYear, from: referenceDate)
+        let id = "\(year)-W\(String(format: "%02d", week))"
+        let currentWeekPostcards = postcards.filter {
+            calendar.component(.weekOfYear, from: $0.savedAt) == week &&
+            calendar.component(.yearForWeekOfYear, from: $0.savedAt) == year
+        }
+        let habitatCounts = Dictionary(grouping: currentWeekPostcards, by: \.habitatTag)
+            .mapValues { $0.count }
+        let colorSwatches = Array(Set(currentWeekPostcards.flatMap(\.colorTags))).sorted()
+        let suggestedNextHabitats = HabitatTag.allCases.filter { habitatCounts[$0] == nil }
+
+        return AlmanacWeek(
+            id: id,
+            postcardIds: currentWeekPostcards.map(\.id),
+            habitatCounts: habitatCounts,
+            colorSwatches: colorSwatches,
+            suggestedNextHabitats: Array(suggestedNextHabitats.prefix(3))
         )
     }
 
@@ -160,7 +227,7 @@ final class BiomeAppModel {
     @discardableResult
     private func persist() -> Bool {
         do {
-            try store.save(BiomeSnapshot(postcards: postcards, drafts: drafts, privacy: privacy, premiumPacks: premiumPacks))
+            try store.save(BiomeSnapshot(postcards: postcards, drafts: drafts, privacy: privacy, premiumPacks: premiumPacks, trailPlans: trailPlans))
             inlineError = nil
             return true
         } catch {

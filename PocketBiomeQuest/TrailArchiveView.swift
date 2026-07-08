@@ -5,16 +5,22 @@ struct TrailArchiveView: View {
 
     var body: some View {
         Group {
-            if model.filteredPostcards.isEmpty {
+            if model.postcards.isEmpty {
                 emptyTrail
             } else {
                 List {
+                    almanacSection
                     filterSection
-                    ForEach(model.filteredPostcards) { postcard in
-                        NavigationLink {
-                            PostcardDetailView(postcard: postcard)
-                        } label: {
-                            PostcardRow(postcard: postcard)
+                    if model.filteredPostcards.isEmpty {
+                        Text("No postcards match this habitat yet. Clear the filter or start another micro-safari.")
+                            .foregroundStyle(.secondary)
+                    } else {
+                        ForEach(model.filteredPostcards) { postcard in
+                            NavigationLink {
+                                PostcardDetailView(postcard: postcard)
+                            } label: {
+                                PostcardRow(postcard: postcard)
+                            }
                         }
                     }
                 }
@@ -24,6 +30,57 @@ struct TrailArchiveView: View {
         .navigationTitle("Trail Archive")
         .toolbar {
             Button("Quest Deck") { model.selectedTab = .quests }
+        }
+    }
+
+    private var almanacSection: some View {
+        let almanac = model.currentAlmanacWeek()
+        return Section {
+            VStack(alignment: .leading, spacing: 14) {
+                HStack {
+                    Image(systemName: "books.vertical")
+                        .foregroundStyle(BiomeTheme.soil)
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("This week’s pocket almanac")
+                            .font(.headline)
+                        Text("\(almanac.postcardCount) saved postcards in \(almanac.id)")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                if !almanac.habitatCounts.isEmpty {
+                    FlowWrap(items: Array(almanac.habitatCounts.keys).sorted { $0.title < $1.title }) { habitat in
+                        Label("\(habitat.title) \(almanac.habitatCounts[habitat] ?? 0)", systemImage: habitat.glyph)
+                            .font(.caption.weight(.semibold))
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 7)
+                            .background(habitat.color.opacity(0.14), in: Capsule())
+                    }
+                }
+                if !almanac.colorSwatches.isEmpty {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Color palette")
+                            .font(.caption.weight(.black))
+                            .foregroundStyle(.secondary)
+                        FlowWrap(items: Array(almanac.colorSwatches.prefix(8))) { swatch in
+                            Text(swatch)
+                                .font(.caption)
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 7)
+                                .background(BiomeTheme.paper, in: Capsule())
+                        }
+                    }
+                }
+                if !almanac.suggestedNextHabitats.isEmpty {
+                    Text("You have not explored \(almanac.suggestedNextHabitats.map { $0.title.lowercased() }.joined(separator: ", ")) yet.")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("This week’s pocket almanac with habitat recap, color palette, and unexplored habitat prompts.")
+        } header: {
+            Text("Weekly Almanac")
         }
     }
 
@@ -65,6 +122,8 @@ struct TrailArchiveView: View {
             Button("Open Quest Deck") { model.selectedTab = .quests }
                 .buttonStyle(.borderedProminent)
                 .tint(BiomeTheme.soil)
+            Button("Build a 15-minute micro-safari") { model.selectedTab = .quests }
+                .font(.subheadline.weight(.semibold))
             Spacer()
         }
         .padding()

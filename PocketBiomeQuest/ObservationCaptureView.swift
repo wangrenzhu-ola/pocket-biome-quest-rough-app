@@ -9,9 +9,14 @@ struct ObservationCaptureView: View {
     @State private var reviewDraft: ObservationDraft?
     @State private var showPhotoNotice = false
     @State private var suggestionsApplied = false
+    @State private var twoPersonMode = false
 
     private let textureOptions = ["velvet patch", "ridged", "glossy edge", "tiny fissures", "hovering motion", "street-side clue"]
     private let colorOptions = ["lichen green", "soil brown", "pollen gold", "sky blue", "stone gray", "warm tan"]
+
+    private var rolePrompt: QuestRolePrompt {
+        model.rolePrompt(for: quest)
+    }
 
     init(quest: QuestCard) {
         self.quest = quest
@@ -35,8 +40,30 @@ struct ObservationCaptureView: View {
                 Text("Build this field postcard")
             }
 
+            Section("Two-Person Quest Mode") {
+                Toggle("Use Spotter and Storyteller prompts", isOn: $twoPersonMode)
+                    .accessibilityLabel("Two-Person Quest Mode")
+                if twoPersonMode {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label(rolePrompt.spotterPrompt, systemImage: "eye")
+                        Label(rolePrompt.storytellerPrompt, systemImage: "text.bubble")
+                    }
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .accessibilityLabel("Spotter and Storyteller prompts for a shared local quest")
+                } else {
+                    Text("Optional for a parent-child pair or walking buddy. No account, sharing, or community is required.")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
+            Section("Noticing Rubric") {
+                NoticingRubricView(habitat: quest.habitatTag)
+            }
+
             Section("Place clue") {
-                TextField("Example: north curb under the bakery window", text: $draft.placeClue, axis: .vertical)
+                TextField(twoPersonMode ? "Spotter: where is the tiny clue?" : "Example: north curb under the bakery window", text: $draft.placeClue, axis: .vertical)
                     .accessibilityLabel("Place clue")
             }
 
@@ -44,7 +71,7 @@ struct ObservationCaptureView: View {
             chipSection(title: "Color tags", options: colorOptions, selection: $draft.colorTags)
 
             Section("Discovery sentence") {
-                TextField("I noticed...", text: $draft.discoverySentence, axis: .vertical)
+                TextField(twoPersonMode ? "Storyteller: I noticed..." : "I noticed...", text: $draft.discoverySentence, axis: .vertical)
                     .lineLimit(3...6)
                     .accessibilityLabel("Discovery sentence")
             }
@@ -129,5 +156,46 @@ struct ObservationCaptureView: View {
         } else {
             selection.wrappedValue.append(option)
         }
+    }
+}
+
+struct NoticingRubricView: View {
+    let habitat: HabitatTag
+
+    private var examples: [(String, String)] {
+        [
+            ("Texture", "velvet patch, ridged bark, glossy edge"),
+            ("Edge", "curb line, crack, puddle rim"),
+            ("Motion", "hovering, dripping, leaf tremble"),
+            ("Color", "lichen green, pollen gold, sky blue"),
+            ("Sound", "soft scrape, rain tap, wing buzz"),
+            ("Pattern", "tiny fissures, three-shade gradient, repeating dots")
+        ]
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Describe the clue, not the species.")
+                .font(.headline)
+            Text("Use any example below, edit the cue chips, or skip suggestions and write your own postcard.")
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 145), spacing: 8)], alignment: .leading, spacing: 8) {
+                ForEach(examples, id: \.0) { item in
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(item.0)
+                            .font(.caption.weight(.black))
+                            .foregroundStyle(habitat.color)
+                        Text(item.1)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    .padding(10)
+                    .background(Color.white.opacity(0.72), in: RoundedRectangle(cornerRadius: 14))
+                }
+            }
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Noticing Rubric. Describe texture, edge, motion, color, sound, and pattern without identifying a species.")
     }
 }

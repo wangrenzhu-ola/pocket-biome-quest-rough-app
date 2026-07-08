@@ -1,0 +1,52 @@
+{
+  "schema_version": "appfactory.runtime_self_check.v1",
+  "target_version": "0.0.2",
+  "implementation_mode": "agent_native_build_loop",
+  "generator_template_substitution_allowed": false,
+  "commands": [
+    {
+      "command": "xcodebuild test -project PocketBiomeQuest.xcodeproj -scheme PocketBiomeQuest -destination 'platform=iOS Simulator,name=iPhone 17' -derivedDataPath DerivedData",
+      "exit_code": 0,
+      "log_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/evidence/xcodebuild-test-v0.0.2.log",
+      "xcresult_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/DerivedData/Logs/Test/Test-PocketBiomeQuest-2026.07.08_23-28-16-+0800.xcresult"
+    },
+    {
+      "command": "xcodebuild build -project PocketBiomeQuest.xcodeproj -scheme PocketBiomeQuest -destination 'platform=iOS Simulator,name=iPhone 17' -derivedDataPath DerivedData",
+      "exit_code": 0,
+      "log_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/evidence/xcodebuild-build-v0.0.2.log"
+    },
+    {
+      "command": "xcrun simctl bootstatus <selected iPhone> -b",
+      "exit_code": 0,
+      "log_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/evidence/simctl-bootstatus-v0.0.2.log"
+    },
+    {
+      "command": "xcrun simctl install <selected iPhone> DerivedData/Build/Products/Debug-iphonesimulator/PocketBiomeQuest.app",
+      "exit_code": 0,
+      "log_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/evidence/simctl-install-v0.0.2.log"
+    },
+    {
+      "command": "xcrun simctl launch <selected iPhone> com.appfactory.pocketbiomequest",
+      "exit_code": 0,
+      "log_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/evidence/simctl-launch-v0.0.2.log"
+    }
+  ],
+  "xcodebuild": {
+    "test_succeeded": true,
+    "build_succeeded": true,
+    "executed_tests": 9
+  },
+  "simulator": {
+    "selected_name": "iPhone 17",
+    "selected_udid": "BBB7317F-76C6-4BD5-BF4B-EF6ABAEBA1F8",
+    "devices_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/evidence/simctl-devices-summary-v0.0.2.json"
+  },
+  "install": {
+    "exit_code": 0,
+    "log_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/evidence/simctl-install-v0.0.2.log"
+  },
+  "launch": {
+    "exit_code": 0,
+    "log_ref": "/Users/wangrenzhu/work/PocketBiomeQuest/evidence/simctl-launch-v0.0.2.log"
+  }
+}

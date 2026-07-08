@@ -6,5 +6,19 @@
   "locale": "en-US",
   "implementation": "native_swiftui",
   "xcode_project": "PocketBiomeQuest.xcodeproj",
-  "skill_refs": ["build-ios-apps", "test-xcode", "swiftui-ui-patterns", "swiftui-view-refactor", "taste-skill"]
+  "skill_refs": [
+    "build-ios-apps",
+    "test-xcode",
+    "swiftui-ui-patterns",
+    "swiftui-view-refactor",
+    "taste-skill"
+  ],
+  "target_version": "0.0.2",
+  "implemented_next_version_features": [
+    "Micro-Safari Trail Plan",
+    "Noticing Rubric",
+    "Trail Almanac",
+    "Two-Person Quest Mode",
+    "Seasonal Field Pack Preview"
+  ]
 }

@@ -1,0 +1,46 @@
+{
+  "iphone_devices": [
+    {
+      "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-26-5",
+      "name": "HermesTest-iPhone17Pro",
+      "udid": "412367D9-C7CC-4E66-A425-9D2AAA4DB206",
+      "state": "Shutdown"
+    },
+    {
+      "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-26-5",
+      "name": "iPhone 17 Pro",
+      "udid": "93FD8455-C95F-4F7F-ABB3-0EA67A6E43EA",
+      "state": "Shutdown"
+    },
+    {
+      "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-26-5",
+      "name": "ThreadTaleDesignGate-iPhone17Pro",
+      "udid": "A0BD2601-EF3F-48EE-8B28-06E1FB9A2603",
+      "state": "Shutdown"
+    },
+    {
+      "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-26-5",
+      "name": "iPhone 17 Pro Max",
+      "udid": "5208BDC2-1F2D-49DC-BB1A-E9EDBDABDED2",
+      "state": "Shutdown"
+    },
+    {
+      "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-26-5",
+      "name": "iPhone 17e",
+      "udid": "96EFE668-6DFD-444A-8051-003C807BC894",
+      "state": "Shutdown"
+    },
+    {
+      "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-26-5",
+      "name": "iPhone Air",
+      "udid": "989EC466-9A6D-4755-B3A0-461CEB844876",
+      "state": "Shutdown"
+    },
+    {
+      "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-26-5",
+      "name": "iPhone 17",
+      "udid": "BBB7317F-76C6-4BD5-BF4B-EF6ABAEBA1F8",
+      "state": "Booted"
+    }
+  ]
+}

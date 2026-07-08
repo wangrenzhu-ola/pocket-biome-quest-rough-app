@@ -14,7 +14,7 @@ struct RootView: View {
             NavigationStack {
                 TrailArchiveView()
             }
-            .tabItem { Label("Trail", systemImage: "postcard") }
+            .tabItem { Label("Trail", systemImage: "photo.on.rectangle") }
             .tag(BiomeAppModel.AppTab.archive)
 
             NavigationStack {

@@ -49,7 +49,7 @@ struct TrailArchiveView: View {
                     .frame(width: 240, height: 180)
                     .overlay(RoundedRectangle(cornerRadius: 34).stroke(style: StrokeStyle(lineWidth: 2, dash: [7])))
                 VStack(spacing: 12) {
-                    Image(systemName: "postcard")
+                    Image(systemName: "photo.on.rectangle")
                         .font(.system(size: 56))
                     Text("Blank field notebook trail")
                         .font(.headline)

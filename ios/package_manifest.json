@@ -1,0 +1,10 @@
+{
+  "schema_version": "appfactory.ios_package_manifest.v1",
+  "product_name": "Pocket Biome Quest",
+  "bundle_identifier": "com.appfactory.pocketbiomequest",
+  "minimum_ios": "17.0",
+  "locale": "en-US",
+  "implementation": "native_swiftui",
+  "xcode_project": "PocketBiomeQuest.xcodeproj",
+  "skill_refs": ["build-ios-apps", "test-xcode", "swiftui-ui-patterns", "swiftui-view-refactor", "taste-skill"]
+}

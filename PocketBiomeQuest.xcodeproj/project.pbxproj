@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01843BE62FBB29EB0250D2CC /* PostcardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C3E420685D2BE2A8D2666 /* PostcardDetailView.swift */; };
+		0F19535714B1CD664E631C3D /* BiomeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614E88C4CFC81A1146F57BC /* BiomeStore.swift */; };
+		246B61C764548F7D73951B6B /* FieldPostcardReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A466321CD44B105A81CA961E /* FieldPostcardReviewView.swift */; };
+		45028C337B4D8AC3CFB77952 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC752A47F41602744D3E38CF /* RootView.swift */; };
+		4F17A2FE25A2CAA15C59C91E /* PremiumQuestStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6C483E05EC5045C870882 /* PremiumQuestStore.swift */; };
+		54E08B43EE90DCF40F0117E5 /* PrivacyOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4B66EC62E1408BD8B188F /* PrivacyOnboardingView.swift */; };
+		55D1D7B6ACE10CC426CFBE67 /* ObservationCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB69026B5C3A9D555B787FC /* ObservationCaptureView.swift */; };
+		7E7CCDD64749F6C0CA26892F /* PocketBiomeQuestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC82660282F7A5FCEA0E64AB /* PocketBiomeQuestApp.swift */; };
+		82B76354C591DDD6DCFCC3C1 /* BiomeAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61AFC0637246EF827F39CF6 /* BiomeAppModel.swift */; };
+		8CBA58FEA0CE56AA1750424B /* PocketBiomeQuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F50BDB74FFADF03A4C3BFB /* PocketBiomeQuestTests.swift */; };
+		9C95F0D2FF2C826F0348F501 /* TrailArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE64E2A24A59101253451CC /* TrailArchiveView.swift */; };
+		B5ECFABD811EB9DE4BC8B7AD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E0163BAA3647D40EC3A /* Theme.swift */; };
+		BA4D7B5007AE0378237ACEA4 /* CueAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B437F8104B4A52AEBCA348 /* CueAssistant.swift */; };
+		BC5285FEA1035F2F248C1AC5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E3C411082EB04980CB6A93 /* StoreKit.framework */; };
+		C77A920CE45A4F1BF8A2B568 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578A716BD3ED458A8454F72 /* Models.swift */; };
+		D1B67EB2662A1DEBC5C1E8CF /* QuestDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD51FFD8864715BCEE28D05C /* QuestDeckView.swift */; };
+		D712CB9BACE97098C458239B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF2C4343C00C2E7DCF1E394 /* Foundation.framework */; };
+		E155AE854A82EBF6F417F01A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF2C4343C00C2E7DCF1E394 /* Foundation.framework */; };
+		EB50A804515EFB2CA58627DE /* PremiumPacksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84421B483606F6ECC5A316D9 /* PremiumPacksView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE2B5EE4D7DCC3C78E9FDCC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B543E6C7B3F81BA32A0DC4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CFB7D530C06EC0CDE8EA23E;
+			remoteInfo = PocketBiomeQuest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01AE615FFE24607C226B2536 /* PocketBiomeQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketBiomeQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08A4B66EC62E1408BD8B188F /* PrivacyOnboardingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrivacyOnboardingView.swift; sourceTree = "<group>"; };
+		11F50BDB74FFADF03A4C3BFB /* PocketBiomeQuestTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PocketBiomeQuestTests.swift; sourceTree = "<group>"; };
+		1FE64E2A24A59101253451CC /* TrailArchiveView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrailArchiveView.swift; sourceTree = "<group>"; };
+		34B61E0163BAA3647D40EC3A /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		4BF2C4343C00C2E7DCF1E394 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		539C3E420685D2BE2A8D2666 /* PostcardDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PostcardDetailView.swift; sourceTree = "<group>"; };
+		5AB69026B5C3A9D555B787FC /* ObservationCaptureView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ObservationCaptureView.swift; sourceTree = "<group>"; };
+		81B437F8104B4A52AEBCA348 /* CueAssistant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CueAssistant.swift; sourceTree = "<group>"; };
+		84421B483606F6ECC5A316D9 /* PremiumPacksView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PremiumPacksView.swift; sourceTree = "<group>"; };
+		9614E88C4CFC81A1146F57BC /* BiomeStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BiomeStore.swift; sourceTree = "<group>"; };
+		A466321CD44B105A81CA961E /* FieldPostcardReviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FieldPostcardReviewView.swift; sourceTree = "<group>"; };
+		A578A716BD3ED458A8454F72 /* Models.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		AD51FFD8864715BCEE28D05C /* QuestDeckView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestDeckView.swift; sourceTree = "<group>"; };
+		B61AFC0637246EF827F39CF6 /* BiomeAppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BiomeAppModel.swift; sourceTree = "<group>"; };
+		BC82660282F7A5FCEA0E64AB /* PocketBiomeQuestApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PocketBiomeQuestApp.swift; sourceTree = "<group>"; };
+		CC752A47F41602744D3E38CF /* RootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		D2B6C483E05EC5045C870882 /* PremiumQuestStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PremiumQuestStore.swift; sourceTree = "<group>"; };
+		E0E3C411082EB04980CB6A93 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = "<group>"; };
+		F4CDB837423097720387162D /* PocketBiomeQuestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketBiomeQuestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		577F76FB6C822E7B5FA2DD59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E155AE854A82EBF6F417F01A /* Foundation.framework in Frameworks */,
+				BC5285FEA1035F2F248C1AC5 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF4B059EB9FFDB7A333ED2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D712CB9BACE97098C458239B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1759FD25A36E1D760C7B4BBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01AE615FFE24607C226B2536 /* PocketBiomeQuest.app */,
+				F4CDB837423097720387162D /* PocketBiomeQuestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		976C1D311B74BBFB7AAC22CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A9E5F66BB192C67A85005CC /* iOS */,
+				E0E3C411082EB04980CB6A93 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A9E5F66BB192C67A85005CC /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4BF2C4343C00C2E7DCF1E394 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BDA54B10E6CB1CAE32A0472C /* PocketBiomeQuestTests */ = {
+			isa = PBXGroup;
+			children = (
+				11F50BDB74FFADF03A4C3BFB /* PocketBiomeQuestTests.swift */,
+			);
+			name = PocketBiomeQuestTests;
+			path = PocketBiomeQuestTests;
+			sourceTree = "<group>";
+		};
+		D60989D8754DC09D21BC02CE /* PocketBiomeQuest */ = {
+			isa = PBXGroup;
+			children = (
+				B61AFC0637246EF827F39CF6 /* BiomeAppModel.swift */,
+				9614E88C4CFC81A1146F57BC /* BiomeStore.swift */,
+				81B437F8104B4A52AEBCA348 /* CueAssistant.swift */,
+				A466321CD44B105A81CA961E /* FieldPostcardReviewView.swift */,
+				A578A716BD3ED458A8454F72 /* Models.swift */,
+				5AB69026B5C3A9D555B787FC /* ObservationCaptureView.swift */,
+				BC82660282F7A5FCEA0E64AB /* PocketBiomeQuestApp.swift */,
+				539C3E420685D2BE2A8D2666 /* PostcardDetailView.swift */,
+				84421B483606F6ECC5A316D9 /* PremiumPacksView.swift */,
+				D2B6C483E05EC5045C870882 /* PremiumQuestStore.swift */,
+				08A4B66EC62E1408BD8B188F /* PrivacyOnboardingView.swift */,
+				AD51FFD8864715BCEE28D05C /* QuestDeckView.swift */,
+				CC752A47F41602744D3E38CF /* RootView.swift */,
+				34B61E0163BAA3647D40EC3A /* Theme.swift */,
+				1FE64E2A24A59101253451CC /* TrailArchiveView.swift */,
+			);
+			name = PocketBiomeQuest;
+			path = PocketBiomeQuest;
+			sourceTree = "<group>";
+		};
+		E84E0FBC8A26E2DE3FE72260 = {
+			isa = PBXGroup;
+			children = (
+				1759FD25A36E1D760C7B4BBC /* Products */,
+				976C1D311B74BBFB7AAC22CF /* Frameworks */,
+				D60989D8754DC09D21BC02CE /* PocketBiomeQuest */,
+				BDA54B10E6CB1CAE32A0472C /* PocketBiomeQuestTests */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15C5962847375B42C3B60530 /* PocketBiomeQuestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDAB4873304FF0870AD3A0F2 /* Build configuration list for PBXNativeTarget "PocketBiomeQuestTests" */;
+			buildPhases = (
+				8402E1EED09F9605EE2F2975 /* Sources */,
+				8CF4B059EB9FFDB7A333ED2F /* Frameworks */,
+				3A9A5BE75C3F7B8AA1E562D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBC9687D7202FA22055769F3 /* PBXTargetDependency */,
+			);
+			name = PocketBiomeQuestTests;
+			productName = PocketBiomeQuestTests;
+			productReference = F4CDB837423097720387162D /* PocketBiomeQuestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3CFB7D530C06EC0CDE8EA23E /* PocketBiomeQuest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DFBA7EC689336C38A222E6 /* Build configuration list for PBXNativeTarget "PocketBiomeQuest" */;
+			buildPhases = (
+				3EA262277847ACFE03046A5F /* Sources */,
+				577F76FB6C822E7B5FA2DD59 /* Frameworks */,
+				996F0EF097B7D9188F2675BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocketBiomeQuest;
+			productName = PocketBiomeQuest;
+			productReference = 01AE615FFE24607C226B2536 /* PocketBiomeQuest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B543E6C7B3F81BA32A0DC4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = D47BDA7619E1744DCDCBA1B6 /* Build configuration list for PBXProject "PocketBiomeQuest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E84E0FBC8A26E2DE3FE72260;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 100;
+			productRefGroup = 1759FD25A36E1D760C7B4BBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CFB7D530C06EC0CDE8EA23E /* PocketBiomeQuest */,
+				15C5962847375B42C3B60530 /* PocketBiomeQuestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A9A5BE75C3F7B8AA1E562D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		996F0EF097B7D9188F2675BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EA262277847ACFE03046A5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82B76354C591DDD6DCFCC3C1 /* BiomeAppModel.swift in Sources */,
+				0F19535714B1CD664E631C3D /* BiomeStore.swift in Sources */,
+				BA4D7B5007AE0378237ACEA4 /* CueAssistant.swift in Sources */,
+				246B61C764548F7D73951B6B /* FieldPostcardReviewView.swift in Sources */,
+				C77A920CE45A4F1BF8A2B568 /* Models.swift in Sources */,
+				55D1D7B6ACE10CC426CFBE67 /* ObservationCaptureView.swift in Sources */,
+				7E7CCDD64749F6C0CA26892F /* PocketBiomeQuestApp.swift in Sources */,
+				01843BE62FBB29EB0250D2CC /* PostcardDetailView.swift in Sources */,
+				EB50A804515EFB2CA58627DE /* PremiumPacksView.swift in Sources */,
+				4F17A2FE25A2CAA15C59C91E /* PremiumQuestStore.swift in Sources */,
+				54E08B43EE90DCF40F0117E5 /* PrivacyOnboardingView.swift in Sources */,
+				D1B67EB2662A1DEBC5C1E8CF /* QuestDeckView.swift in Sources */,
+				45028C337B4D8AC3CFB77952 /* RootView.swift in Sources */,
+				B5ECFABD811EB9DE4BC8B7AD /* Theme.swift in Sources */,
+				9C95F0D2FF2C826F0348F501 /* TrailArchiveView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8402E1EED09F9605EE2F2975 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CBA58FEA0CE56AA1750424B /* PocketBiomeQuestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBC9687D7202FA22055769F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PocketBiomeQuest;
+			target = 3CFB7D530C06EC0CDE8EA23E /* PocketBiomeQuest */;
+			targetProxy = BE2B5EE4D7DCC3C78E9FDCC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0F2D7E3403A58FD058B5E7C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appfactory.pocketbiomequest.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketBiomeQuest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PocketBiomeQuest";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F544F3B4E78474E27C3AF7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4593465775400D1CA049B02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appfactory.pocketbiomequest.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketBiomeQuest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PocketBiomeQuest";
+			};
+			name = Debug;
+		};
+		53FE647F913309466F1460A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B673B95C02C81CCE96DF91F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pocket Biome Quest";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Pocket Biome Quest can attach an optional local photo reference to a field postcard. Photos are never uploaded.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appfactory.pocketbiomequest;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC733706FFDFFE758452FA75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pocket Biome Quest";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Pocket Biome Quest can attach an optional local photo reference to a field postcard. Photos are never uploaded.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appfactory.pocketbiomequest;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04DFBA7EC689336C38A222E6 /* Build configuration list for PBXNativeTarget "PocketBiomeQuest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B673B95C02C81CCE96DF91F9 /* Release */,
+				CC733706FFDFFE758452FA75 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D47BDA7619E1744DCDCBA1B6 /* Build configuration list for PBXProject "PocketBiomeQuest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F544F3B4E78474E27C3AF7F /* Debug */,
+				53FE647F913309466F1460A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDAB4873304FF0870AD3A0F2 /* Build configuration list for PBXNativeTarget "PocketBiomeQuestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F2D7E3403A58FD058B5E7C3 /* Release */,
+				4593465775400D1CA049B02F /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B543E6C7B3F81BA32A0DC4B /* Project object */;
+}

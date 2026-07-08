@@ -1,6 +1,7 @@
 {
   "schema_version": "appfactory.source_inventory.v1",
-  "file_count": 48,
+  "file_count": 47,
+  "self_excluded": "evidence/source_inventory.json",
   "files": [
     {
       "path": ".DS_Store",
@@ -144,8 +145,8 @@
     },
     {
       "path": "evidence/gh-repo-view.json",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "bytes": 175,
+      "sha256": "37150c6abccb2020c5aa2df8a35d791560df12a15f954dc26e9fbda956196a21"
     },
     {
       "path": "evidence/gh-version.exit",
@@ -206,11 +207,6 @@
       "path": "evidence/simctl-launch.log",
       "bytes": 39,
       "sha256": "fd89f07cb547fdac1fb9afe3e0a4698a99edd6edc0ac4e4718085f8174d3cfd4"
-    },
-    {
-      "path": "evidence/source_inventory.json",
-      "bytes": 8040,
-      "sha256": "1dfdc416382caff943390863b8629457cc0cf25c53102ee861f7af1c45dcc250"
     },
     {
       "path": "evidence/xcodebuild-build.exit",

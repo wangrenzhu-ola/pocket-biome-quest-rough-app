@@ -45,7 +45,7 @@ enum HabitatTag: String, Codable, CaseIterable, Identifiable {
     }
 }
 
-struct QuestCard: Identifiable, Codable, Equatable {
+struct QuestCard: Identifiable, Codable, Equatable, Hashable {
     let id: UUID
     var title: String
     var habitatTag: HabitatTag
@@ -58,7 +58,7 @@ struct QuestCard: Identifiable, Codable, Equatable {
     var isPremium: Bool { premiumPackId != nil }
 }
 
-struct ObservationDraft: Identifiable, Codable, Equatable {
+struct ObservationDraft: Identifiable, Codable, Equatable, Hashable {
     var id: UUID
     var questId: UUID
     var placeClue: String
@@ -75,7 +75,7 @@ struct ObservationDraft: Identifiable, Codable, Equatable {
     }
 }
 
-struct FieldPostcard: Identifiable, Codable, Equatable {
+struct FieldPostcard: Identifiable, Codable, Equatable, Hashable {
     var id: UUID
     var questId: UUID
     var questTitle: String
